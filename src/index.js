@@ -62,7 +62,7 @@ var myvar = 'my value';
 (function() {
     console.assert(myvar === undefined)
     var myvar = 'local value';
-})()
+})();
 
 
 
@@ -84,7 +84,7 @@ function test() {
     }
     console.assert(flag === true)
 }
-test()
+test();
 
 //We gave flag a value of true in the first line, which moves with the rest
 //of the function throughout. We never change it's value we just ask it in an
@@ -100,7 +100,7 @@ function saySomething() {
     console.assert(message === undefined)
     var message = 'Foo bar'
 }
-saySomething()
+saySomething();
 
 // We are giving our function a new variable named message. Does this make the
 //variable "message" undefined as we are making a variable inside our function?
@@ -115,7 +115,7 @@ function saySomething() {
     console.assert(message === 'Hello world')
     message = 'Foo bar'
 }
-saySomething()
+saySomething();
 
 //(in relation to the above answer)
 //Whereas in this one we're not giving message as a new variable, but we're
@@ -125,7 +125,7 @@ saySomething()
 
 
 // 5. Make the assertion(s) pass, then answer below (in a comment) why the assertion is that value.
-function test() {
+function test2() {
 
     console.assert(a === undefined)
     console.assert(foo() === 2)
@@ -135,7 +135,7 @@ function test() {
         return 2
     }
 }
-test()
+test2();
 
 //in the test function we're calling on the foo function and are returned a "2"
 //because that's what the function was told to return. The variable "a" wasn't
@@ -147,12 +147,12 @@ test()
 // 6.Make the assertion(s) pass, then answer below (in a comment) why the assertion is that value.
 
 (function() {
-    console.assert(bar === undefined)
-    console.assert(foo() === 'undefined - :)')
+    console.assert(bar === undefined);
+    console.assert(foo() === 'undefined - :)');
 
     function foo() {
-        return bar+' - :)'
+        return bar+' - :)';
     }
 
-    var bar = 1
-})()
+    var bar = 1;
+})();
